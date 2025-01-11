@@ -1,0 +1,76 @@
+.card {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative; /* Para aislar los estilos de los elementos hijos */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardMedia {
+  object-fit: cover;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-around; 
+  /* margin-top: 10px; */
+  opacity: 0; /* Oculta inicialmente los botones */
+  transition: opacity 0.3s ease;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 8px; /* Posiciona los botones en la parte inferior */
+  width: 100%;
+  padding: 0 0px; /* Ajusta el espaciado desde los bordes */
+  pointer-events: none; /* Evita que interfieran con clics en el Card */
+}
+
+.iconButton {
+  pointer-events: all; /* Habilita clics solo en los botones */
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo claro */
+  border-radius: 50%; /* Hace los botones redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card:hover .actionButtons {
+  opacity: 1; /* Muestra los botones al pasar el cursor */
+}
+
+.iconButton:hover {
+  background-color: rgba(255, 255, 255, 1); /* Cambia el fondo al pasar el cursor */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+@media (max-width: 480px) {
+  .iconButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%;
+    margin: 5px auto;
+  }
+}

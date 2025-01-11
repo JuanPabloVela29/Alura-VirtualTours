@@ -1,0 +1,30 @@
+.categoriesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .videosContainer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .videosGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .videoCard {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .videoCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

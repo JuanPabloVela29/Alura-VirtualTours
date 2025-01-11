@@ -1,0 +1,40 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "key": "invierno",
+      "nombre": "Invierno",
+      "imagen": "/images/invierno.png"
+    },
+    {
+      "id": "2",
+      "key": "verano",
+      "nombre": "Verano",
+      "imagen": "/images/verano.png"
+    },
+    {
+      "id": "3",
+      "key": "lluvioso",
+      "nombre": "Lluvioso",
+      "imagen": "/images/lluvioso.png"
+    },
+    {
+      "id": "4",
+      "key": "navidad",
+      "nombre": "Navidad",
+      "imagen": "/images/navidad.png"
+    },
+    {
+      "id": "5",
+      "key": "lugares-increibles",
+      "nombre": "Lugares Increíbles",
+      "imagen": "/images/lugaresincreibles.png"
+    },
+    {
+      "id": 1736552809572,
+      "nombre": "Comidas",
+      "imagen": "https://i.blogs.es/a174db/dap/1366_2000.jpg",
+      "key": "comidas"
+    }
+  ]
+}
