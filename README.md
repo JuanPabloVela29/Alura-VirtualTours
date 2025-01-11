@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# AluraFlix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+**AluraFlix** es una aplicación web desarrollada en **React** que permite gestionar videos de walking tours categorizados según temáticas como estaciones, festividades y lugares increíbles. Este proyecto incluye funcionalidades de gestión de videos y categorías, además de un diseño moderno y responsivo.
 
-## Available Scripts
+## Funcionalidades Principales
 
-In the project directory, you can run:
+### Gestión de Videos
+1. **Listado de videos:**
+   - Muestra todos los videos disponibles categorizados.
+   - Permite filtrar videos por categorías específicas.
+2. **Agregar videos:**
+   - Formulario para agregar un nuevo video con los siguientes campos:
+     - Título.
+     - Imagen de miniatura (URL).
+     - Enlace al video.
+     - Categoría (selección de una lista desplegable).
+   - Validaciones incluidas para garantizar datos completos.
+3. **Editar videos:**
+   - Modificación de videos existentes a través de un modal.
+   - Edición en tiempo real de campos como título, imagen, enlace, categoría y descripción.
+4. **Eliminar videos:**
+   - Elimina videos con una confirmación previa mediante SweetAlert para evitar acciones accidentales.
 
-### `npm start`
+### Gestión de Categorías
+1. **Listado de categorías:**
+   - Visualización de todas las categorías disponibles.
+2. **Crear nuevas categorías:**
+   - Formulario que permite agregar nuevas categorías con validaciones.
+3. **Editar categorías:**
+   - Modificación de categorías existentes con validaciones integradas.
+4. **Eliminar categorías:**
+   - Opción de eliminar categorías con confirmación previa.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Navegación
+- Implementación de rutas dinámicas con **React Router** para una experiencia fluida.
+- Navegación intuitiva y estructurada en una **Single Page Application (SPA)**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Estilo y Responsividad
+- Diseño estilizado utilizando **Material UI**.
+- Completamente responsivo para dispositivos móviles, tablets y escritorio.
+- Íconos animados y mejorados con Material Icons.
 
-### `npm test`
+## Tecnologías Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- **React**: Biblioteca principal para la creación de la interfaz.
+- **React Router**: Manejo de rutas dinámicas.
+- **Material UI**: Estilización y componentes prediseñados.
+- **SweetAlert**: Confirmaciones interactivas.
 
-### `npm run build`
+### Backend
+- **JSON Server**: Servidor simulado para la manipulación de datos.
+  - **Rutas del backend:**
+    - Videos: `http://localhost:5000/videos`
+    - Categorías: `http://localhost:5001/categorias`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Otros
+- **Hooks personalizados:** Implementación para mejorar la gestión de estado y lógica reutilizable.
+- **Librerías de generación de IDs únicos:** Garantiza identificadores consistentes para videos y categorías.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Estructura del Proyecto
+```
+AluraFlix/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── categoria/
+│   │   ├── categorias/
+│   │   ├── editmodal/
+│   │   ├── footer/
+│   │   ├── header/
+│   │   ├── nuevacategoria/
+│   │   ├── nuevovideo/
+│   │   ├── tarjetavideo/
+│   │   ├── videoplayermodal/
+│   └── App.js
+│   └── index.js
+├── data/
+│   ├── categories.json
+│   └── db.json
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Cómo Ejecutar el Proyecto
 
-### `npm run eject`
+### Requisitos Previos
+- **Node.js** instalado.
+- **npm** o **yarn** como gestor de paquetes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Pasos
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/aluraflix.git
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor JSON:
+   ```bash
+   json-server --watch db.json --port 5000
+   json-server --watch db.json --port 5001
+   ```
+4. Inicia la aplicación:
+   ```bash
+   npm start
+   ```
+5. Accede a la aplicación en [http://localhost:3000](http://localhost:3000).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Autor
+Desarrollado por [Juan Pablo Velásquez].
